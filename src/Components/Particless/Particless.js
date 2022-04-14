@@ -24,7 +24,7 @@ const Particless = () => {
               mode: "push",
             },
             onHover: {
-              enable: true,
+              enable: false,
               mode: "repulse",
             },
             resize: true,
@@ -33,7 +33,7 @@ const Particless = () => {
             bubble: {
               distance: 400,
               duration: 2,
-              opacity: 0.8,
+              opacity: 0,
               size: 40,
             },
             push: {
@@ -41,7 +41,7 @@ const Particless = () => {
             },
             repulse: {
               distance: 200,
-              duration: 0.4,
+              duration: 0,
             },
           },
         },
@@ -64,15 +64,15 @@ const Particless = () => {
             enable: true,
             outMode: "bounce",
             random: false,
-            speed: 6,
-            straight: false,
+            speed: 3,
+            straight: true,
           },
           number: {
             density: {
               enable: true,
               area: 800,
             },
-            value: 80,
+            value: 40,
           },
           opacity: {
             value: 0.5,

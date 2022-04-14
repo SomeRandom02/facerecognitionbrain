@@ -14,12 +14,13 @@
     "react-scripts": "^4.0.2",
     "react-tilty": "^2.0.3",
     "react-tsparticles": "^1.42.4",
+    "serve": "^13.0.2",
     "tachyons": "^4.12.0",
     "tilt-react-wrapper": "^1.0.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

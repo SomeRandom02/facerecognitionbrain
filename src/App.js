@@ -19,7 +19,7 @@ const initialState = {
     id: '',
     name: '',
     email: '',
-    entries: 0,
+    entires: 0,
     joined: ''
   }
 }
@@ -35,7 +35,7 @@ class App extends Component {
       id: data.id,
       name: data.name,
       email: data.email,
-      entries: data.entries,
+      entires: data.entires,
       joined: data.joined
     }})
   }
@@ -83,7 +83,7 @@ class App extends Component {
           })
             .then(response => response.json())
             .then(count => {
-              this.setState(Object.assign(this.state.user, { entries: count}))
+              this.setState(Object.assign(this.state.user, { entires: count}))
             })
             .catch(console.log)
 
@@ -111,7 +111,7 @@ class App extends Component {
         { route === 'Home' 
           ? <div>
               {/* <Logo /> */}
-              <Rank name={this.state.user.name} entries={this.state.user.entries}/>
+              <Rank name={this.state.user.name} entires={this.state.user.entires}/>
               <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
               <FaceRecognition box={box} imageUrl={input} /> 
           </div>

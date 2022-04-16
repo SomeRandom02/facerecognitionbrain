@@ -63,9 +63,7 @@ class App extends Component {
   };
 
   onButtonSubmit = () => {
-    if (this.state.input.length < 15) {
-      return console.log("please enter an image url")
-    }
+    if (this.state.input.includes('.jpg') || this.state.input.includes('.png')) {
     this.setState({imageUrl: this.state.input});
       fetch('https://tranquil-peak-69950.herokuapp.com/imageurl', {
         method: 'post',
@@ -93,6 +91,8 @@ class App extends Component {
         this.displayFaceBox(this.calculateFaceLocation(response))
       })
       .catch(err => console.log(err));
+    }
+    console.log("please enter a proper image URL") 
   }
 
   onRouteChange = (route) => {

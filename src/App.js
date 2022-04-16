@@ -63,6 +63,9 @@ class App extends Component {
   };
 
   onButtonSubmit = () => {
+    if (this.state.input.length < 15) {
+      return console.log("please enter an image url")
+    }
     this.setState({imageUrl: this.state.input});
       fetch('https://tranquil-peak-69950.herokuapp.com/imageurl', {
         method: 'post',
